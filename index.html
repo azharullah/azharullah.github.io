@@ -8,6 +8,7 @@
 
                 <!--Import Google Icon Font-->
                 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
                 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Righteous|Varela+Round" rel="stylesheet">
                 <!--Import materialize.css-->
                 <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
@@ -24,19 +25,19 @@
                 <div class="navbar-fixed">
                         <nav class="z-depth-2">
                                 <div class="nav-wrapper">
-                                        <a href="#" class="brand-logo"> <img id="res_img" src="img/back.jpg"> <span> Azhar </span> </a>
+                                        <a href="#0" class="brand-logo"> <img id="res_img" src="img/azhar_small.jpg"> <span> Azhar </span> </a>
                                         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                                        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                                <li><a href="#0">About</a></li>
-                                                <li><a href="#0">Career</a></li>
-                                                <li><a href="#0">Code</a></li>
-                                                <li><a href="#0">Contact</a></li>
+                                        <ul id="nav-mobile" class="right hide-on-med-and-down section table-of-contents">
+                                                <li><a href="#aboutme">About</a></li>
+                                                <li><a href="#career">Career</a></li>
+                                                <li><a href="#code">Code</a></li>
+                                                <li><a href="#contact">Contact</a></li>
                                         </ul>
-                                        <ul class="side-nav" id="mobile-demo">
-                                                <li><a href="#0">About</a></li>
-                                                <li><a href="#0">Career</a></li>
-                                                <li><a href="#0">Code</a></li>
-                                                <li><a href="#0">Contact</a></li>
+                                        <ul class="side-nav section table-of-contents" id="mobile-demo">
+                                                <li><a href="#aboutme">About</a></li>
+                                                <li><a href="#career">Career</a></li>
+                                                <li><a href="#code">Code</a></li>
+                                                <li><a href="#contact">Contact</a></li>
                                         </ul>
                                 </div>
                         </nav>
@@ -44,9 +45,9 @@
 
                 <div id="main_contents" class="row col s12 l12 m12">
 
-                        <img id="myimagemain" class="responsive-img center-align" src="img/back.jpg">
+                        <img id="myimagemain" class="responsive-img center-align" src="img/azhar_full.jpg">
                         <div class="act_icons">
-                                <h3 class="center-align" style="margin-bottom:50px;font-family: 'Baloo Bhaina', cursive;"> <span style="color:"> Hi! I'm </span> Md.<span style="color:"> Azhar</span>ullah Shariff</h3>
+                                <h2 class="center-align red-text" style="margin-bottom:50px;font-family: 'Baloo Bhaina', cursive;"> <span style="color:orange"> Hi! I'm </span> Md.<span style="color:#ffeb3b"> Azhar</span>ullah Shariff</h2>
                                 <a href="https://www.facebook.com/mohammedazharullah.shariff" title="Facebook" target="_blank"><img class="responsive-img social_icons" src="social/fb.png"></a>
                                 <a href="https://twitter.com/md_azharullah" title="Twitter" target="_blank"><img class="responsive-img social_icons" src="social/twitter.png"></a>
                                 <a href="mailto:shariffazharullah@gmail.com" title="Gmail" target="_blank"><img class="responsive-img social_icons" src="social/email.png"></a>
@@ -57,14 +58,14 @@
 
                 </div>
 
-                <div id="aboutme" class="container">
+                <div id="aboutme" class="container section scrollspy">
 
                         <h3 class="center-align"><i class="medium material-icons" style="vertical-align: middle;">perm_identity</i> Firstly, a little about me!</h3>
                         <p>I'm Azharullah, a final year compsci undergrad at the National Institute of Technology, Calicut. A developer by passion, a night-owl, a big foodie and a true hyderabadi at heart! I &hearts; making things that make people's lives simpler and easier. Also,  I do occasionally <a href="https://azharullah.wordpress.com" target="_blank"> blog </a> and write on <a href="https://www.quora.com/profile/Azharullah-Shariff" target="_blank"> quora. </a> I am a hard-core gamer, the Assasins' Creed and FIFA series being my all-time favourites. Find me on <a href="https://www.facebook.com/mohammedazharullah.shariff" target="_blank"> facebook </a> or <a href="https://twitter.com/md_azharullah" target="_blank"> twitter </a>, my code on <a href="https://github.com/azharullah" target="_blank"> github </a>, or simply write to me @ <a href="mailto:shariffazharullah@gmail.com"> shariffazharullah@gmail.com</a>.</p>
 
                 </div>
 
-                <div id="career" class="container">
+                <div id="career" class="container section scrollspy">
 
                         <h3 class="center-align"><i class="medium material-icons" style="vertical-align: middle;">person_pin</i>I've marked my presence at a few places!</h3>
 
@@ -93,7 +94,7 @@
 
                 </div>
 
-                <div id="code" class="container col s8 l3">
+                <div id="code" class="container col s8 l3 section scrollspy">
 
                         <h3 class="center-align"> <i class="material-icons medium" style="vertical-align: middle;">language</i> I've developed things, some of which people actually use!</h3>
 
@@ -157,7 +158,7 @@
 
                 </div>
 
-                <div id="contact" class="">
+                <div id="contact" class="section scrollspy">
 
                         <h3 class="center-align"> <i class="material-icons medium" style="vertical-align: middle;">perm_contact_calendar</i> Want to connect with me?</h3>
 
@@ -199,25 +200,26 @@
                                 <div class="row">
                                         <div class="col l6 s12">
                                                 <h5 class="white-text">This website</h5>
-                                                <p>Powered by jQuery, MaterializeCSS, Github.</p>
+                                                <p>Powered by <a target="_blank" href="https://jquery.com">jQuery</a>, <a target="_blank" href="http://materializecss.com"> MaterializeCSS</a>, <a target="_blank" href="https://github.com"> Github</a>.</p>
                                                 <p> Inspired by <a target="_blank"  href="https://ashishkedia.me">Ashish Kedia</a>, <a target="_blank" href="http://debarghyadas.com">Debarghya Das</a></p>
-                                                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                                                <p>For any issues, mailto: <a href="mailto:shariffazharullah@gmail.com">shariffazharullah@gmail.com</a></p>
+                                                <!-- <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> -->
                                         </div>
                                         <div class="col l4 offset-l2 s12">
-                                                <h5 class="white-text">Links</h5>
+                                                <h5 class="white-text">Info for Nerds</h5>
                                                 <ul>
-                                                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                                                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                                                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                                                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                                                        <li><a href="#!">Site Map</a></li>
+                                                        <li>Hosted on <a href="http://www.ubuntu.com">Ubuntu machine</a>, running on <a href="https://www.apache.org">Apache server</a></li>
+                                                        <li>Source Code available on <a href="https://github.com/AZHARULLAH/Material-Portfolio">Github</a></li>
+                                                        <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
                                                 </ul>
                                         </div>
                                 </div>
                         </div>
                         <div class="footer-copyright">
-                                <div class="container">
+                                <div class="container"  style="font-weight:bold">
                                         &copy; 2016, Md. Azharullah Shariff
-                                        <a class="black-text right" href="#!">This website powered by jQuery. </a>
+                                        <a class="black-text right" target="_blank" href="https://jquery.com">This website powered by jQuery. </a>
                                 </div>
                         </div>
                 </footer>

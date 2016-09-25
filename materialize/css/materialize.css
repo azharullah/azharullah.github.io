@@ -6669,10 +6669,10 @@ nav ul a span.badge {
   margin-right: -0.75rem;
 }
 
-.section {
+/*.section {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
+}*/
 
 .section.no-pad {
   padding: 0;
@@ -9738,15 +9738,15 @@ select {
 /***************
     Nav List
 ***************/
-.table-of-contents.fixed {
+/*.table-of-contents.fixed {
   position: fixed;
-}
+}*/
 
-.table-of-contents li {
+/*.table-of-contents li {
   padding: 2px 0;
-}
+}*/
 
-.table-of-contents a {
+/*.table-of-contents a {
   display: inline-block;
   font-weight: 300;
   color: #757575;
@@ -9755,19 +9755,19 @@ select {
   line-height: 1.5rem;
   letter-spacing: .4;
   display: inline-block;
-}
+}*/
 
-.table-of-contents a:hover {
+/*.table-of-contents a:hover {
   color: #a8a8a8;
   padding-left: 19px;
   border-left: 1px solid #ea4a4f;
-}
+}*/
 
-.table-of-contents a.active {
+/*.table-of-contents a.active {
   font-weight: 500;
   padding-left: 18px;
   border-left: 2px solid #ea4a4f;
-}
+}*/
 
 .side-nav {
   position: fixed;

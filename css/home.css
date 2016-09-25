@@ -4,6 +4,14 @@ body
 	font-family: 'PT Sans', sans-serif;
 }
 
+.brand-logo
+{
+	font-family: 'Acme', sans-serif !important;
+	font-weight: bold !important;
+	color: #3f51b5 !important;
+	font-size: 3rem !important;
+}
+
 #myimagemain
 {
 	position: absolute;
@@ -21,6 +29,7 @@ body
 	width: 4.2vw;
 	border-radius: 50%;
 	display: inline;
+	filter: invert(100%);
 }
 
 nav
@@ -31,7 +40,24 @@ nav
 #main_contents
 {
 	height: 95vh !important;
-	background-color: pink;
+}
+
+#main_contents:before
+{
+	height: 95vh !important;
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-image: url("../img/back.jpg");
+	background-size: 100vw 95vh;
+	/*-webkit-filter: blur(5px);
+  	-moz-filter: blur(5px);
+  	-o-filter: blur(5px);
+  	-ms-filter: blur(5px);
+  	filter: blur(5px);*/
+  	-webkit-filter: grayscale(100%);
 }
 
 .act_icons
@@ -171,4 +197,14 @@ div.chip.last_chips.odd
 .last_chips
 {
 	margin-top: -20px !important;
+}
+
+footer
+{
+	font-family: 'Varela Round', sans-serif;
+}
+
+footer a
+{
+	color: #303f9f;
 }
