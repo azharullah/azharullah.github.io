@@ -4,6 +4,9 @@ $(document).ready(function(){
 
 	$('.scrollspy').scrollSpy();
 
+	var actdim = $("#myimagemain").height()
+
+
 	$(window).scroll(function()
 	{
 		var winheight = $(window).scrollTop();
@@ -14,7 +17,7 @@ $(document).ready(function(){
 			$("#res_img").height(dim);
 			$("#res_img").width(dim);
 	    	}
-	    	var imdim = 200 - winheight / 3;
+	    	var imdim = actdim - winheight / 3;
 	    	if(imdim > 60)
 	    	{
 	    		$("#myimagemain").height(imdim);
