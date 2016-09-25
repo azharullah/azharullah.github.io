@@ -209,3 +209,38 @@ footer a
 {
 	color: #303f9f;
 }
+
+/**********************************************************************/
+
+/*@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://athena.nitc.ac.in/azharullahshariff_b130727cs/material-design-icons/Material-Design-Icons.eot);
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(http://athena.nitc.ac.in/azharullahshariff_b130727cs/material-design-icons/Material-Design-Icons.woff2) format('woff2'),
+       url(http://athena.nitc.ac.in/azharullahshariff_b130727cs/material-design-icons/Material-Design-Icons.woff) format('woff'),
+       url(http://athena.nitc.ac.in/azharullahshariff_b130727cs/material-design-icons/Material-Design-Icons.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  font-feature-settings: 'liga';
+}*/
