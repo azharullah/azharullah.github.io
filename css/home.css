@@ -1,0 +1,174 @@
+body
+{
+	background-color: #37474f;
+	font-family: 'PT Sans', sans-serif;
+}
+
+#myimagemain
+{
+	position: absolute;
+	height: 13vw;
+	width: 13vw;
+	border-radius: 50%;
+	top: 50vh;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.social_icons
+{
+	height: 4.2vw;
+	width: 4.2vw;
+	border-radius: 50%;
+	display: inline;
+}
+
+nav
+{
+	z-index: 10000 !important;
+}
+
+#main_contents
+{
+	height: 95vh !important;
+	background-color: pink;
+}
+
+.act_icons
+{
+	position: absolute;
+	top: 76vh;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.act_icons a
+{
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+.social_icons
+{
+	opacity: 0.5;
+	transition-duration: 1s;
+}
+
+.social_icons:hover
+{
+	opacity: 1;
+	transition-duration: 1s;
+}
+
+nav ul a
+{
+	font-weight: bold;
+	font-size: 1.3rem !important;
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+}
+
+.brand-logo img
+{
+	height: 0px;
+	width: 0px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+#aboutme, #career, #code, #contact
+{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#aboutme h3, #career h3, #code h3, #contact h3
+{
+	margin-top: 20px;
+	margin-bottom: 60px;
+	color: red;
+	font-family: 'Baloo Bhaina', cursive;
+}
+
+#aboutme p
+{
+	font-family: 'Varela Round', sans-serif;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+
+.collapsible-header
+{
+	font-size: 1.6rem;
+	color: #ef5350 !important;
+	font-family: 'Righteous', cursive;
+}
+
+.career_dates
+{
+	color: #1976d2;
+	font-size: 1.3rem;
+}
+
+.collapsible-body
+{
+	font-size: 1.2rem;
+	color: #0d47a1;
+	background-color: #90caf9;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.projects_img
+{
+	width: 4rem !important;
+	height: 4rem !important;
+	margin-right: 10px !important;
+}
+
+.avatar .title
+{
+	font-size: 1.5rem !important;
+	color: #e53935;
+	font-weight: bold;
+	font-family: 'Righteous', cursive;
+}
+
+.avatar p
+{
+	margin-top: 7px !important;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.0rem;
+}
+
+.avatar .chip a
+{
+	color: #1976d2 !important;
+	font-size: 1.0rem;
+}
+
+h4
+{
+	color: white;
+	font-family: 'Baloo Bhaina', cursive;
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+div.chip.last_chips.odd
+{
+	margin-left: 10vw !important;
+}
+
+.last_chips a
+{
+	font-size: 1rem !important;
+	color: red !important;
+}
+
+.last_chips
+{
+	margin-top: -20px !important;
+}
