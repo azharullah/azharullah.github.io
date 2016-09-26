@@ -30,6 +30,9 @@ $(document).ready(function(){
 		jQuery('html,body').animate({scrollTop:0},3000);
 	})
 
+	// $(document).bind("contextmenu copy paste cut drag drop ",function(e) {return false;});
+
+
 })
 
 // $(".fadeaway").css("opacity", 0.4);

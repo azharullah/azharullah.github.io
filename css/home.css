@@ -23,6 +23,39 @@ body
 	transform: translate(-50%,-50%);
 }
 
+.fb_section
+{
+	position: absolute;
+	top: 11vh;
+	right: 2vh;
+	color: white !important;
+}
+
+.twitter-follow-button
+{
+	position: absolute !important;
+	top: 15vh !important;
+	right: 2vh !important;
+	color: white !important;
+}
+
+.resume
+{
+	position: absolute;
+	top: 95vh;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #ffffff;
+	font-size: 20px !important;
+	font-weight: bold;
+}
+
+.resume a
+{
+	color: black !important;
+	font-family: 'Acme', sans-serif !important;
+}
+
 .social_icons
 {
 	height: 4.2vw;
