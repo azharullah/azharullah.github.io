@@ -1,0 +1,183 @@
+<html>
+
+    <head>
+        <title>Instructions for GDG talk project setup</title>
+    </head>
+
+    <body>
+
+        <h2>Instructions to configure and setup the project presented in the GDG session on Feb 4th.</h2>
+
+        <div>
+            <p>The instructions below are for Linux OS. For all other operting systems, only the Step 1 would change. </p>
+        </div>
+        
+        <ol class="main-list">
+           
+           <li>Setting up important packages</li>
+
+           <ol class="sub-list">
+
+                <li>Setting up Node JS and NPM</li>
+                    <code>sudo apt-get update</code> <br>
+                    <code>sudo apt-get install nodejs</code> <br>
+                    <code>sudo apt-get install npm</code>
+
+                <li>Setting up Bower</li>
+                    <code>sudo apt-get update</code> <br>
+                    <code>sudo npm install bower -g</code>
+
+            </ol>
+            <hr>
+
+            <li>Downloading and setting up the project</li>
+
+            <ol class="sub-list">
+                <li>Visit this <a target="_blank" href="https://github.com/AZHARULLAH/azharullah.github.io/releases/download/1.0.0/ionic.zip">link</a>. You would get a file 'ionic.zip' downloaded.</li>
+                <li>Extract it into a desired location. You would get a folder 'ionic' which contains 4 folders - 'angular-code', 'ionic-code', 'json-server' and 'presentation'.</li>
+                <li>Navigate (cd) into each of the folders in each separate terminal windows.</li>
+            </ol>
+            <hr>
+
+            <li>Setting up the JSON server</li>    
+            
+            <ol class="sub-list">
+                <li>In the terminal window with the json-server directory open, do the following:</li>
+                <p>Install the json-server package to run the server using:</p>
+                    <code> sudo npm install json-server -g </code>
+                <p>Run the json-server using:</p>
+                    <code> json-server --watch db.json </code>
+                <p>You will now have the json-server running at <a target="_blank" href="http://localhost:3000/">localhost:3000/</a>.</p>
+                <p>Leave the process running in the terminal window. Press Ctrl-C to stop it any time.</p>
+            </ol>
+            <hr>
+
+            <li>Setting up the angular project</li>
+
+            <ol class="sub-list">
+                <li>In the terminal window with the angular-code directory open, do the following:</li>
+                <li>Setup a server for running the angular-code using:</li>
+                    <code> python -m SimpleHTTPServer 8000 </code>
+                <li>You will now have the complete angular project running at <a target="_blank" href="http://localhost:8000/">localhost:8000/</a>.</li>
+                <li>Leave the process running in the terminal window. Press Ctrl-C to stop it any time.</li>
+            </ol>
+            <hr>
+
+            <li>Setting up a server for viewing the presentation:</li>
+            <p>(The presentation needs to run on a server because there are ionic demos that require a server to run)</p>
+
+            <ol class="sub-list">
+                <li>In the terminal window with the presentation directory open, do the following:</li>
+                <li>Installing packages required for running the presentation:</li>
+                    <code> sudo npm install </code>
+                <li>Setup a server for running the presentation using:</li>
+                    <code> python -m SimpleHTTPServer 5555 </code>
+                <li>You will now have the complete angular project running at <a target="_blank" href="http://localhost:5555/">localhost:5555/</a>.</li>
+                <li>Leave the process running in the terminal window. Press Ctrl-C to stop it any time.</li>
+            </ol>
+            <hr>
+
+            <li>Running the ionic project</li>
+
+            <ol class="sub-list">
+                <li>In the terminal window with the ionic-code directory open, do the following:</li>
+                <li>Installing npm packages required for running the ionic project:</li>
+                    <code> sudo npm install -g cordova</code> <br>
+                    <code> sudo npm install -g ionic </code> <br>
+                    <code> sudo npm install gulp-cli -g</code> <br>
+                    <code> sudo npm install</code>
+                <li>Installing bower packages required for running the ionic project:</li>
+                    <code> sudo bower install </code>
+                <li>Run the ionic project as a website using: (Stop with Ctrl-C)</li>
+                    <code> ionic serve </code>
+                <li>Run the ionic project in the ionic lab using: (Stop with Ctrl-C)</li>
+                    <code> ionic serve --lab </code>
+                <li>To run and test your ionic project on an Android mobile device, you need to have the Android SDK and Java JDK setup. (If you have a working Android Studio setup, it is adequate). Then run the following commands:</li><br>
+                    <code> ionic platform add android</code><br>
+                    <code>ionic build android</code><br>
+                    <code>ionic run android</code>
+                <li>To run and test your ionic project on an Android mobile device using the ionic cloud,</li>
+                    <p>Create an account in the ionic cloud <a target="_blank" href="https://ionic.io/cloud">here</a></p>
+                    <p>Install the ionic view app by searching for 'ionic view' in Google Play Store. <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ionic.viewapp&hl=en">Here</a> is the link to the app. Signin to the ionic cloud using the app.</p>
+                    <p>Then upload the app to the ionic cloud using:</p>
+                    <code> ionic upload </code>
+                    <p>You will be asked to enter your credentials and then, the app will be uploaded to the ionic cloud.</p>
+                    <p>You can now view the app in your ionic view app in the mobile phone.</p>
+            </ol>
+            <hr>
+
+            <li>So we're done with the setup. I highly encourage you to tweak into and play with the code to understand how the code works and contact me for queries via the contact links in the presentation.</li>
+            <li><a target="_blank" href="https://hackr.io/tutorials/learn-ionic">Here</a> is a list of tutorials that will help you learn and get-started about ionic.</li>
+
+        </ol>
+        <hr>
+
+    </body>
+
+    <style type="text/css">
+
+        body
+        {
+            background-color: lightblue;
+        }
+
+        h2
+        {
+            text-align: center; 
+            color: darkblue; 
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .main-list li
+        {
+            margin: 15px 0 15px 15px;
+            font-size: 25px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .sub-list li
+        {
+            font-weight: normal;
+            margin: 15px 0 20px 50px;
+            font-size: 20px;
+            color: darkblue;
+        }
+
+        code
+        {
+            padding: 10px;
+            margin-left: 100px;
+            line-height: 25px;
+            color: white;
+            background-color: black;
+        }
+
+        p
+        {
+            margin-left: 80px;
+        }
+
+        div p
+        {
+            color: darkred;
+            font-size: 25px;
+            text-align: center; 
+        }
+    
+        a
+        {
+            color: maroon;
+        }
+
+        hr
+        {
+            margin-top: 20px;
+            border: 2px dotted lightseagreen;
+        }
+
+    </style>
+
+</html>
