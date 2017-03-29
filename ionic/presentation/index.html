@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Hybrid Mobile App Development</title>
+
+    <meta name="description" content="Cross-Platform mobile app development with Ionic Framework!">
+    <meta name="author" content="https://twitter.com/md_azharullah">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        .list-sep li{
+        margin: 10px 0 10px 0;
+        }
+        .framework-name{
+        color: #ffb74d !important;
+        }
+        .spec-names{
+        color: orange !important;
+        }
+        .heading{
+        color: #ffff00 !important;
+        }
+        body{
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+        <section>
+        <img src="img/ionic-logo.png" class="logo" width="296" height="331">
+        <h4 style="margin-top: 50px;">Building Hybrid Apps with AngularJS and Ionic</h4>
+        </section>
+
+        <section>
+            <img src="img/me.jpg" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
+            <ul style="position: absolute; top:0px; left:350px; list-style-type: none;">
+                <li><span style="font-size: 50px; color: orange;"> Md. Azharullah Shariff </span></li>
+                <li style="margin-top: 20px;"><span> Web and App Developer </span></li>
+                <li style="margin-top: 20px;"">NIT Calicut</li>
+                <li style="margin-top: 20px;""><a target="_blank" href="mailto:shariffazharullah@gmail.com">shariffazharullah@gmail.com</a></li>
+                <li style="margin-top: 20px;""><a target="_blank" href="https://twitter.com/md_azharullah">@md_azharullah</a></li>
+                <li style="margin-top: 20px;""><a target="_blank" href="http://azharullah.github.io/">azharullah.github.io</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="font-size: 50px; margin-top: -20px; color: lightgreen">Overview</h2>
+            <ol class="list-sep">
+                <li style="margin-top: 20px;">Native vs Hybrid Apps</li>
+                <li style="margin-top: 20px;">Overview of <span class="framework-name"> AngularJS (v1)</span></li>
+                <li style="margin-top: 20px;">Introduction to <span class="framework-name"> IONIC framework (v1)</span></li>
+            </ol>
+        </section>
+
+        <section>
+            <img src="img/nat-vs-hyb.png" style="margin: auto; max-width: 500px; max-height: 400px; border-radius: 30px">
+            <h2 class="framework-name" style="padding-top: 60px;"> Hybrid vs Native Apps </h2>
+        </section>
+
+        <section>
+            <blockquote>
+                &ldquo;I want to build an app!&rdquo;
+            </blockquote>
+        </section>
+
+        <section>
+            <h3 class="heading">More Platforms. More Problems.</h3>
+            <ul>
+                <li>Proficiency in each platform required</li>
+                <li>Entirely separate code bases</li>
+                <li>Timely &amp; expensive development</li>
+                <li>Diminishing returns</li>
+            </ul>
+            <p style="margin-top: 60px">
+                <img src="img/apple.png" class="logo" width="200" height="200" style="margin-right: 10px">
+                <img src="img/android.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+                <img src="img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+                <img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">
+            </p>
+        </section>
+
+        <section>
+            <h3 class="heading" style="font-size: 80px">Hybrid Apps!</h3>
+            <p style="font-size: 32px"><strong class="spec-names">HTML5</strong> that acts like native</p>
+            <p style="font-size: 32px">Web wrapped in <strong class="spec-names">native layer</strong></p>
+            <p style="font-size: 32px">Direct access to <strong class="spec-names">native APIs</strong></p>
+            <p style="font-size: 32px">Familiar <strong class="spec-names">web dev</strong> environment</p>
+            <p style="font-size: 32px">A <strong class="spec-names">single code base</strong> (web platform!)</p>
+        </section>
+
+        <section data-background="img/oldphones.jpg">
+            <blockquote style="font-size: 80px; font-family:Georgia; text-shadow: 5px 0 15px rgba(0,0,0,.7)">
+                &ldquo;It's not 2007 anymore&rdquo;
+            </blockquote>
+        </section>
+
+        <section data-background="img/dylan.jpg">
+            <img src="img/times-changin.png" style="height: 100px; margin: 0 300px 40px 0;">
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Device</th>
+                    <th>Processor</th>
+                    <th>RAM</th>
+                </tr>
+                <tr>
+                    <td>2007</td>
+                    <td>iPhone</td>
+                    <td>400 MHz</td>
+                    <td>128 MB</td>
+                </tr>
+                <tr>
+                    <td>2010</td>
+                    <td>iPhone 4</td>
+                    <td>1 GHz</td>
+                    <td>512 MB</td>
+                </tr>
+                <tr>
+                    <td>2015</td>
+                    <td>iPhone 6</td>
+                    <td>1.4 GHz dual-core</td>
+                    <td>1 GB</td>
+                </tr>
+                <tr>
+                    <td>2016</td>
+                    <td>iPhone 7</td>
+                    <td>2.34 GHz Quad-core</td>
+                    <td>2 GB</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h4 style="font-size:50px; margin:0; color: orange;">Web-standards</h4>
+            <h4 style="font-size:80px; color: orange;">Have improved!</h4>
+            <p style="font"><a href="http://caniuse.com/">caniuse.com</a> is lookin' pretty good nowadays</p>
+            <p>Android is now <strong>Chromium-based</strong></p>
+            <p>iOS users keep their devices <strong>up-to-date</strong></p>
+
+            <p style="text-align:center;">
+                <img src="img/caniuse-querySelector.png" width=460 class="logo">
+                <img src="img/caniuse-flexbox.png" width=460 class="logo">
+            </p>
+        </section>
+
+        <section data-background="white">
+            <img src="img/ios8-adoption.png">
+            <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p>
+        </section>
+
+        <section data-background="white">
+            <img src="img/android-adoption.png">
+            <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p>
+        </section>
+
+        <section>
+            <h3 style="margin:0; color: orange;">Native SDKs...</h3>
+            <h2 style="font-size:2.2em; color: orange;">Are Great!</h2>
+            <p style="margin:30px auto 20px auto; width: 600px">
+                Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
+            </p>
+            <img src="img/native-sdk.png" style="width:66%">
+        </section>
+
+        <section data-background="img/websdk.png" style="width:100%">
+        </section>
+
+        <section data-background="white">
+            <img src="img/ionic-logo.svg" style="width:750px;">
+        </section>
+
+        <section>
+            <h3 style="margin:0; font-size:32px">Web Technologies You Already</h3>
+            <h2 style="font-size: 85px;"><span style="color: orange;">Know</span> &amp; <span style="color: orange;">Love</span></h2>
+            <div style="margin-top: 30px">
+                <img src="img/html.png" class="logo" width="185" height="260">
+                <img src="img/css.png" class="logo" width="185" height="260" style="margin-left: 80px; margin-right: 80px;">
+                <img src="img/js.png" class="logo" width="185" height="260">
+            </div>
+            <p style="margin-top: 30px; opacity: 0.6">
+                (You'll feel right at home)
+            </p>
+        </section>
+
+        <section data-background="img/angular-bg.png">
+            <h3 style="font-size:42px; margin:0">Superpowered by</h3>
+            <h2 style="font-size:90px; color: yellow;">Angular</h2>
+            <p style="margin-top:60px;"><strong>Extends the HTML</strong> vocabulary</p>
+            <p>Proven for <strong>large-scale</strong> app development</p>
+            <p>UI Components using <strong>Directives &amp; Services</strong></p>
+        </section>
+
+        <section data-background="img/sass.png">
+            <h2 style="font-size:3em; text-transform: none; color: yellow;">Sass!</h2>
+            <p>CSS generated from the <strong>Sass preprocessor</strong></p>
+            <p>Quickly give your app its own <strong>look and feel</strong></p>
+            <p>CSS designed to be <strong>easily overridden</strong></p>
+            <p><strong>Variables based</strong> with default settings</p>
+        </section>
+
+        <section data-background="img/phones-stacked.png">
+            <h2 style="color:black; margin-bottom: 50px">How it all comes together</h2>
+            <ul class="stack">
+                <li style="background: #20ab93">Your App</li>
+                <li style="background: #4c8df5">Ionic</li>
+                <li style="background: #d94442">Angular</li>
+                <li style="background: #3b4854">WebView (Cordova)</li>
+                <li style="background: #d4deee; color: #3b4854;">Native App</li>
+            </ul>
+        </section>
+
+        <section data-background="img/angular-bg.png">
+            <h2 style="font-size:90px; color: yellow;">Angular JS</h2>
+            <p>Structural framework for dynamic web applications</p>
+            <p>Designed by Misko Hevery</p>
+            <p>First released in June 2012</p>
+            <p>One of the most popular front-end JS frameworks</p>
+        </section>
+
+        <section>
+            <div>
+                <h3 style="color: orange;">Angular Vocabulary</h3>
+                <ul style="margin-left: 70px">
+                    <li>Two-way Data Binding</li>
+                    <li>Scope</li>
+                    <li>Directives</li>
+                    <li>Templates</li>
+                    <li>Routing</li>
+                    <li>Modules</li>
+                    <li>Controllers</li>
+                    <li>Filters</li>
+                    <li>Factory</li>
+                    <li>Service</li>
+                    <li>Provider</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular directives</h2>
+            <div>
+                <ul style="margin-left: 70px">
+                    <li>
+                        <h5 style="color: yellow;">ngApp directive</h5>
+                        <p>Applied to specify the root of the application</p>
+                    </li>
+                    <li>
+                        <h5 style="color: yellow;">ngInit directive</h5>
+                        <p>Used to evaluate an expression, initialize a JavaScript variable</p>
+                        <pre><code>
+<p ng-init='index = 1'> </p>
+<div class="row row-content" ng-init="dish = { name:'Uthapizza', ...} ">
+</div></code></pre>
+                    </li>
+                    <li>
+                        <h5 style="color: yellow;">Angular Expressions</h5>
+                        <p>Evaluated against an Angular scope object</p>
+                        <pre><code><h2 class="media-heading"> {{dish.name}} </h2></code></pre>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular directives</h2>
+            <div>
+                <ul style="margin-left: 70px">
+                    <li>
+                        <h5 style="color: yellow;">ngModel directive</h5>
+                        <p>binds the input value to a variable within the scope (Two-way data binding)</p>
+                        <pre><code>
+&lt;div ng-app&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" ng-model="yourName"&gt;
+    &lt;p&gt;Hello {{yourName}}!&lt;/p&gt;
+&lt;/div&gt;
+                    </code></pre>
+                        <a style="font-size: 20px; float: right; color: #d4e157; target="_blank" href="https://jsbin.com/mekusac/edit?html,output">Link to the demo</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular directives</h2>
+            <div>
+                <ul style="margin-left: 70px">
+                    <li>
+                        <h5 style="color: yellow;">ngRepeat directive</h5>
+                        <p>Loops over items in a collection</p>
+                        <pre><code>
+<ul class="media-list">
+<li class="media" ng-repeat="dish in dishes">     
+    ...
+</li>
+</ul>
+                    </code></pre>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Modules and Controllers</h2>
+            <p>Angular is built with MVC, MVW in specific!</p>
+            <pre><code>
+<script>
+    var app = angular.module(‘confusionApp’,[]);
+</script>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Modules and Controllers</h2>
+            <ul>
+                <h5 style="color: yellow;">Model</h5>
+                <li>manages the behavior and data of the application domain and responds to requests for information about its state</li>
+                <li>responds to instructions to change state</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Modules and Controllers</h2>
+            <ul>
+                <h5 style="color: yellow;">View</h5>
+                <li>renders the model into a form suitable for interaction, typically a user interface element</li>
+                <li>Multiple views can exist for a single model for different purposes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Modules and Controllers</h2>
+            <ul>
+                <h5 style="color: yellow;">Controller</h5>
+                <li>receives user input and initiates a response by making calls on model objects</li>
+                <li>instructs the model and viewport to perform actions based on that input</li>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Controller</h2>
+            <ul>
+                <li><p>JavaScript object containing attributes/properties and functions</p></li>
+                <li><p>Exposes variables and functionality to expressions and directives</p></li>
+            </ul>
+            <pre><code>
+<div class="row row-content" ng-controller="menuController as menuCtrl">
+</div>
+            </code></pre>
+            <pre><code>
+<script>    
+    var app = angular.module('confusionApp',[]);
+    app.controller('menuController', function() {});
+</script>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Filters</h2>
+            <ul>
+                <li><p>formatting the value of an expression for display to the end user</p></li>
+                <li><p>can be used in view templates, controllers or services</p></li>
+                <li><p>Examples: uppercase/lowercase, currency, date, filter, orderBy, etc.</p></li>
+            </ul>
+            <pre><code>
+<div class="media-body">
+    <span class="badge">{{dish.price | currency}}</span>
+</div>
+            </code></pre>
+        </section>
+
+        <section data-background="#232323">
+            <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
+            <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+            <p style="margin-top: 100px;"><a target="_blank" href="http://localhost:8000/Stage1/angular/conFusion/app/menu.html">Here</a> is a demo of the conFusion App implementation of Models, Views, Controllers</p>
+            <p style="margin-top: 10px;"><a target="_blank" href="http://localhost:8000/Stage1/angular/conFusion/app/dishdetail.html">Here</a> is a demo of the conFusion App implementation of Filters </p>
+        </section>
+
+        <!-- Part 1 complete -->
+
+        <section>
+            <h2 style="color: orange;">Angular Scope</h2>
+            <ul>
+                <li><p>an object that refers to the application model</p></li>
+                <li>
+                    <p>glue between the view and the controller</p>
+                    <ul>    
+                        <li>The controller can set properties on the scope</li>
+                        <li>The view binds to the properties set by the controller</li>
+                        <li>Angular is responsible to keep the two in sync</li>
+                    </ul>
+                </li>
+            </ul>
+            <pre><code>
+<h1>{{carname}}</h1>
+            </code></pre>
+            <pre><code>
+<script>
+    app.controller('myCtrl', function($scope) {
+        $scope.carname = "Volvo";
+    });
+</script>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Forms and Form Validation</h2>
+            <ul>
+                <li><p>Two-way Data Binding makes it straightforward to work with forms</p></li>
+            </ul>
+            <pre><code>
+<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ng-model="feedback.firstName" required>   
+            </code></pre>
+            <pre><code>
+<script>
+    app.controller('ContactController', ['$scope', function($scope){
+        $scope.feedback = {mychannel:"", firstName:"", lastName:"", agree:false, email:""};
+    }
+</script>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Binding Select</h2>
+            <p>Select items can be bound by defining JavaScript object</p>
+            <pre><code>
+<script>
+    var channels = [{value:"tel", label:"Tel."}, {value:"Email", label:"Email"}];
+</script>
+            </code></pre>
+            <p>Then bind using ng-options directive</p>
+            <pre><code>
+<select class="form-control” ng-model="feedback.mychannel” ng-options="channel.value as channel.label for channel in channels">
+    <option value="">Tel. or Email?</option>                                                                     
+</select>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Form Validation</h2>
+            <ul>
+                <li>Angular takes over responsibility for validation</li>
+                <li>Form needs to have a name</li>
+                <li>ng-submit directive specifies the function to call</li>
+            <pre><code>
+&ltform class="form-horizontal" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
+            </code></pre>
+                <li>Angular has directives for form validation like ng-minlength, ng-maxlength and ng-pattern</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Field Properties</h2>
+            <ul>
+                <li>Angular has pre-defined form field attributes like 'feedbackForm.firstName.$pristine'</li>
+                <li><span style="color: yellow;">$pristine</span> - true if form has not been changed</li>
+                <li><span style="color: yellow;">$dirty</span> - reverse of $pristine</li>
+                <li><span style="color: yellow;">$valid</span> - true if form field/whole form is valid</li>
+                <li><span style="color: yellow;">$invalid</span> - reverse of $valid</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Field Properties and CSS</h2>
+            <p>Bootstrap provides a lot of CSS classes to enable display of form validation state and messages</p>
+            <ul>
+                <li>.has-error</li>
+                <li>.has-warning</li>
+                <li>.has-success</li>
+                <li>.help-block</li>
+            </ul>
+        </section>
+
+        <section data-background="#232323">
+            <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time Again!</strong></h2>
+            <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+            <p style="margin-top: 100px;"><a target="_blank" href="http://localhost:8000/Stage2/angular/conFusion/app/contactus2.html">Here</a> is a demo of the conFusion App implementation of Form Validation</p>
+        </section>
+
+        <!-- Part 2 complete -->
+
+        <section>
+            <h2 style="color: orange;">Dependency Injection</h2>
+            <ul>
+                <li><span style="color: yellow;">Dependency:</span> An object that can be used (a service)</li>
+                <li><span style="color: yellow;">Injection:</span> Passing of a dependency to a dependent object so that it can use it.</li>
+                <li><span style="color: yellow;">Dependency Injection:</span> Software design pattern that implements inversion of control for resolving dependencies</li>
+                <li>Involves four roles - The service, client, interfaces and injector</li>
+                <li>In Angular, injecor subsystem is used for creating components, resolving their dependencies and providing them to other components</li>
+                <pre><code>
+<script>
+    module.controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory){
+    }]);
+</script>
+                </code></pre>
+            </ul>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">Angular Factory and Service</h2>
+            <h4 style="color: yellow;">Angular Services</h4>
+            <ul>
+                <li>Substitutable objects wired together using DI</li>
+                <li>Helps organizing and sharing code across an app</li>
+                <li>Angular has built-in services like $http, $scope, $rootScope, $location, $parse, $injector</li>
+                <li>These need to be injected using DI</li>
+            </ul>
+        </section>  
+
+        <section>
+            <h2 style="color: orange;">Creating you own services</h2>
+            <h4 style="color: yellow;">Five functions that declare services</h4>
+            <ul>
+                <li>service()</li>
+                <li>factory()</li>
+                <li>provider()</li>
+                <li>constant()</li>
+                <li>value()</li>
+            </ul>
+        </section>    
+
+        <section>
+            <h2 style="color: orange;">Angular Factory</h2>
+            <pre><code>
+angular.module('confusionApp')
+.factory('menuFactory', function()  {
+    var menufac = {};
+    var dishes = […];
+    menufac.getDishes = function(){
+        return dishes;
+    };
+    menufac.getDish = function(index)    
+    {
+        return  dishes[index];
+    };
+    return  menufac;
+});
+
+---------------------------------------------------------------
+
+angular.module('confusionApp')
+.controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory)   
+{
+    $scope.dishes = menuFactory.getDishes();
+}]);
+            </code></pre>
+        </section>     
+
+        <section>
+            <h2 style="color: orange;">Angular Service</h2>
+            <pre><code>
+angular.module('confusionApp')
+.service('menuFactory', function(){
+    var dishes = […];
+    this.getDishes = function(){
+        return dishes;
+    };
+    this.getDish = function(index)    
+    {
+        return dishes[index];
+    };
+});
+
+---------------------------------------------------------------
+
+angular.module('confusionApp')
+.controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory)   
+{
+    $scope.dishes = menuFactory.getDishes();
+}]);
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular Templates</h2>
+            <ul>
+                <li>Written in HTML</li>
+                <li>Dynamic View = Template + Controller + Model</li>
+                <li>Angular elements and attributes consists of Directives, Markup, Filter and Form controls</li>
+                <li>Eg: the ngInclude directive: used to fetch, compile and include an external HTML fragment</li>
+                <li>It creates a new scope</li>
+            </ul>
+            <pre><code>
+<div ng-include="'menu.html'"></div>
+<ng-include src="'menu.html'"></ng-include>
+            </code></pre>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">Single Page Applications</h2>
+            <ul>
+                <li>Web application or web site that fits in a single page</li>
+                <ul>
+                    <li>No need to reload the entire page</li>
+                    <li>UX like a desktop/native application</li>
+                    <li>Most resources are retrieved with a single page load</li>
+                    <li>Redraw parts of the page when needed without requiring a full server roundtrip</li>
+                </ul>
+            </ul>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">Traditional websites</h2>
+            <img src="img/traditional-apps.png" class="logo" width="800">
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">Single Page Applications</h2>
+            <img src="img/spa-apps.png" class="logo" width="800">
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">Challenges with SPA's</h2>
+            <ul>
+                <li>Search engine optimization</li>
+                <li>Maintaining history</li>
+                <li>Analytics</li>
+                <li>Speeding up the initial page load</li>
+            </ul>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">SPA's with Angular UI-Router</h2>
+            <ul>
+                <li>Views based on the state of the application</li>
+                <ul>
+                    <li>Can change parts of your site using the routing even if the URL does not change</li>
+                </ul>
+                <li>Multiple Views</li>
+                <li>Nested Views</li>
+                <li>Dependency injection into the module:</li>
+                <pre><code>
+angular.module('confusionApp', ['ui.router'])
+                </code></pre>
+            </ul>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">SPA's with Angular UI-Router</h2>
+            <ul>
+                <li>Router as a State Machine</li>
+                <pre><code>
+.config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+    .state('app', {
+        url: '/',
+        views: {
+            'header': { templateUrl : 'views/header.html' },
+            'content': { template : '<h1>To be Completed</h1>', controller : 'IndexController' },
+            'footer': { templateUrl : 'views/footer.html' }
+        }
+    })                                              
+    .state('app.aboutus', {
+        url: 'aboutus',
+        views: {
+            'content@': { template: '<h1>To be Completed</h1>', controller : 'AboutController' }
+        }
+    });
+    $urlRouterProvider.otherwise('/');
+});
+                </code></pre>
+            </ul>
+        </section> 
+
+        <section>
+            <h2 style="color: orange;">SPA's with Angular UI-Router</h2>
+            <ul>
+                <li>ui-view Directive</li>
+                <ul><li>Indicates where to include the views</li></ul>
+                <pre><code>
+<div ui-view="header"></div>
+<div ui-view="content"></div>
+<div ui-view="footer"></div>
+                </code></pre>
+                <li>ui-sref Directive</li>
+                <ul><li>indicate which state to move to when clicked</li></ul>
+                <pre><code>
+<a ui-sref="app"></a>
+<a ui-sref="app.aboutus"></a>
+<a ui-sref="app.menu"></a>
+                </code></pre>
+            </ul>
+        </section> 
+
+        <section data-background="#232323">
+            <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time Again!</strong></h2>
+            <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+            <p style="margin-top: 100px;"><a target="_blank" href="http://localhost:8000/Stage3/angular/conFusion/app/#!/">Here</a> is a demo of the conFusion App implementation of Angular UI-Router in a SPA</p>
+        </section>
+
+        <!-- Part 3 complete -->
+
+        <section>
+            <h2 style="color: orange;">Client-Server Communication</h2>
+            <h5 style="color: yellow;">Angular $http</h5>
+            <ul>
+                <li>Angular service to communicate with servers using the HTTP protocol</li>
+                <li>Uses the browser's XMLHttpRequest/JSONP</li>
+                <li>Requests are asynchronous</li>
+            </ul>
+            <pre><code>
+    $http({method: 'GET', url: '/dishes'})
+        .then(function() {...}, function() {...});
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Client-Server Communication</h2>
+            <h5 style="color: yellow;">$http methods</h5>
+            <ul>
+                <li>$http.get()</li>
+                <li>$http.put()</li>
+                <li>$http.post()</li>
+                <li>$http.delete()</li>
+                <li>$http.jsonp()</li>
+                <li>$http.head()</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Client-Server Communication</h2>
+            <h5 style="color: yellow;">$http.get() example</h5>
+            <pre><code>
+$http.get(baseURL+"dishes")
+    .then(
+        function(response) {
+            $scope.dishes = response.data;
+            $scope.showMenu = true;
+        },
+        function(response) {
+            $scope.message = "Error: " + response.status + " " + response.statusText;
+        }
+    );
+            </code></pre>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Client-Server Communication</h2>
+            <h5 style="color: yellow;">$http response</h5>
+            <ul>
+                <li><span style="color: black">response.data</span>: string/object containing the body of the message</li>
+                <li><span style="color: black">response.status</span>: status code</li>
+                <li><span style="color: black">response.headers</span>: header information</li>
+                <li><span style="color: black">response.config</span>: configuration object</li>
+                <li><span style="color: black">response.statusText</span>: HTTP status text of the response</li>
+                <li>$http.head()</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Representational State Transfer</h2>
+            <ul>
+                <li>Exchange of data using either XML or JSON</li>
+                <li>Four basic design principles:</li>
+                <ul>
+                    <li>Use HTTP methods explicitly</li>
+                    <li>Be stateless</li>
+                    <li>Expose directory structure-like URIs</li>
+                    <li>Transfer using XML, JSON or both</li>
+                </ul>
+                <li>Exploits the use of the HTTP protocol beyond HTTP POST, GET, PUT, DELETE</li>
+                <pre><code>
+"http://www.conFusion.food/dishes/"
+"http://www.conFusion.food/dishes/123"
+"http://www.conFusion.food/promotions/"
+                </code></pre>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">HTTP Methods</h2>
+            <ul>
+                <li><span style="color:yellow"> HTTP POST</span>: Creates a resource</li>
+                <pre><code>
+POST "http://www.conFusion.food/feedback/"     
+                </code></pre>
+                <li><span style="color:yellow"> HTTP PUT</span>: Updates a resource</li>
+                <pre><code>
+PUT "http://www.conFusion.food/dishes/123"     
+                </code></pre>
+                <li><span style="color:yellow"> HTTP DELETE</span>: Removes the resource identified by the URI</li>
+                <pre><code>
+DELETE "http://www.conFusion.food/dishes/456"    
+                </code></pre>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular ng-Resource</h2>
+            <ul>
+                <li>A module provides a higher level abstraction than $http</li>
+                <li>Not a part of Angular core, needs to be injected through DI</li>
+                <pre><code>
+angular.module('confusionApp', ['ui.router', 'ngResource'])
+                </code></pre>
+                <li>A higher level abstraction wrapper around a REST API for operations</li>
+                <pre><code>
+$resource(url, [paramDefaults], [actions], options);
+                </code></pre>
+            </ul>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Angular ng-Resource</h2>
+            <p style="color: yellow;">Example</p>
+            <pre><code>
+$resource(baseURL+"dishes/:id", null, {'update':{method:'PUT' }})
+    .get({id:0}).$promise.then(
+        function(response){
+            $scope.dish = response;
+            $scope.showDish = true;
+        },
+        function(response){
+            $scope.message = "Error: " + response.status + " " + response.statusText;
+        }
+    );
+            </code></pre>
+        </section>
+
+        <section data-background="#232323">
+            <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time Again!</strong></h2>
+            <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+            <p style="margin-top: 100px;"><a target="_blank" href="http://localhost:8000/Stage4/app/#/">Here</a> is a demo of the conFusion App implementation of REST services in a SPA</p>
+        </section>
+
+        <!-- Part 4 end -->
+
+        <section data-background="white">
+            <img src="img/ionic-logo.svg" style="width:750px;">
+        </section>
+
+        <section data-background="img/continuity.png">
+        </section>
+
+        <section>
+            <div class="col preview demo-frame">
+                <iframe isrc="demos/list/index.html"></iframe>
+            </div>
+            <div class="col code">
+                <h2 style="color: orange;">Complex Lists</h2>
+                <ul style="margin-left: 70px">
+                    <li>AngularJS Directive</li>
+                    <li>Buttons exposed by swiping</li>
+                    <li>Reorder</li>
+                    <li>Delete</li>
+                </ul>
+<pre><code data-trim contenteditable class="xml">
+<ion-list>
+    <ion-item ng-repeat="item in items" item="item">
+        List Item {{ item.id }}
+    </ion-item>
+</ion-list>
+</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <div class="col preview demo-frame">
+                <iframe isrc="demos/collection-repeat/index.html"></iframe>
+            </div>
+            <div class="col code">
+                <h3 style="color: orange;">Collection Repeat</h3>
+                <ul style="margin-left: 70px">
+                    <li>Replacement for Angular's ng-repeat</li>
+                    <li>Inspired by iOS’s UICollectionView</li>
+                    <li>Scroll through thousands of items</li>
+                    <li>Only renders the viewable items</li>
+                    <li>Smooth scrolling!</li>
+                </ul>
+<pre><code data-trim contenteditable class="xml">
+<div class="list">
+    <div collection-repeat="c in contacts">
+        <h2>{{ c.name }}</h2>
+        <p>{{ c.email }}</p>
+    </div>
+</div>
+</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <div class="col preview demo-frame">
+                <iframe isrc="demos/swipe-back/index.html"></iframe>
+            </div>
+            <div class="col code">
+                <h3 style="color: orange;">Swipe To Go Back</h3>
+                <ul style="margin-left: 70px">
+                    <li>Swipe back to previous view</li>
+                    <li>Interactive transition</li>
+                    <li>Benefit of cached views</li>
+                    <li>Still updates the app's URL</li>
+                    <li>WebView (Cordova) only</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+        <div class="col preview demo-frame">
+            <iframe isrc="demos/components/index.html"></iframe>
+        </div>
+        <div class="col code">
+            <h3 style="color: orange;">Other Components</h3>
+            <ul style="margin-left: 70px">
+                <li>Side Menus</li>
+                <li>Actionsheet</li>
+                <li>Modal</li>
+                <li>Pull To Refresh</li>
+                <li>Spinners</li>
+                <li>Slidebox</li>
+                <li>Infinite Scroll</li>
+                <li>Swipeable List Options</li>
+                <li>Popup</li>
+                <li>Popover</li>
+                <li>Loading Overlay</li>
+                <li>Inputs</li>
+                <li>Buttons</li>
+                <li>etc.</li>
+            </ul>
+        </div>
+        </section>
+
+        <section>
+            <h2 style="color: orange;"><strong>MIT LICENSED</strong></h2>
+            <h6 class="light-text">Free to use (even commercially)</h6>
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Ionicons</h2>
+            <img src="img/ionicons.png" class="logo" width="655" height="436">
+            <p style="color: yellow;">700+ MIT licensed font-icons included</p>
+            <p><a href="http://ionicons.com/" target="_blank">ionicons.com</a></p>
+        </section>
+
+        <section data-background="white">
+            <p><code style="font-size: 1.2em;" class="ionic-blue">npm install -g ionic cordova</code></p>
+            <img src="img/cli.png" height="220" style="border: 0">
+            <p class="ionic-blue">Boilerplate <strong>app structure</strong> ready for customization</p>
+            <p class="ionic-blue"><strong>LiveReload</strong> both local and native builds</p>
+            <p class="ionic-blue">Build and run <strong>native apps</strong></p>
+        </section>
+
+        <section data-background="img/chromium.jpg">
+            <h3 style="margin:0; font-size:60px;">Modern</h3>
+            <h2 style="color: orange; font-size:80px;">Chromium!</h2>
+            <p>Chromium for Android <strong style="color: yellow;">WebViews</strong></p>
+            <p><strong style="color: yellow;">Upgrade Android</strong> 4.1+ and above</p>
+            <p>Same hardware, <strong style="color: yellow;">modern software</strong></p>
+            <p><strong style="color: yellow;">Amazing performance</strong> improvements</p>
+        </section>
+
+        <section data-background="img/ng-cordova.png">
+        </section>
+
+        <section data-background="img/ionicio.png">
+        </section>
+
+        <section data-background="img/ionic-view.png">
+        </section>
+
+        <section data-background="img/ionic-creator.png">
+        </section>
+
+        <section data-background="img/market.png">
+        </section>
+
+        <section data-background="img/community.jpg">
+        </section>
+
+        <section data-background="img/ionic-angular-v2.jpg">
+        </section>
+
+        <section>
+            <h2 style="color: orange;">Get Started with Ionic!</h2><br/>
+            <p>
+                <strong style="color: yellow;">Getting started guide</strong><br/>
+                <a href="hhttp://ionicframework.com/getting-started/" target="_blank">
+                    <span class="light-text">ionicframework.com/getting-started</span>
+                </a>
+            </p>
+            <p>
+                <strong style="color: yellow;">Documentation</strong><br/>
+                <a href="http://ionicframework.com/docs/" target="_blank">
+                    <span class="light-text">ionicframework.com/docs</span>
+                </a>
+            </p>
+            <p>
+                <strong style="color: yellow;">Visit the Community Forum</strong><br/>
+                <a href="http://forum.ionicframework.com/" target="_blank">
+                    <span class="light-text">forum.ionicframework.com</span>
+                </a>
+            </p>
+            <p>
+                <strong style="color: yellow;">Contribute on GitHub</strong><br/>
+                <a href="https://github.com/driftyco/ionic" target="_blank">
+                    <span class="light-text">github.com/driftyco/ionic</span>
+                </a>
+            </p>
+        </section>
+
+        <section data-background="#232323">
+            <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
+            <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+        </section>
+
+        <section>
+            <h2 style="color: orange;"><code style="font-size:60px">&lt;/html&gt;</code></h2>
+            <h3 style="color: yellow;">
+                <a href="https://twitter.com/ionicframework" target="_blank"> @ionicframework </a>
+            </h3>
+            <h4>
+                <a href="http://ionicframework.github.io/ionic-present/#/"> http://ionicframework.github.io/ionic-present </a>
+            </h4>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    overview: true,
+    transitionSpeed: 'slow',
+    backgroundTransition: 'linear',
+
+    transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+    // Optional reveal.js plugins
+    dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+    ]
+});
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    // load iframes on page enter to speed up initial load time
+    console.log(event)
+    var iframe = event.currentSlide.querySelector('iframe')
+    if(iframe){
+        iframe.setAttribute('src',iframe.getAttribute('isrc'));
+    }
+
+    var prevIframe = event.previousSlide.querySelector('iframe');
+    if(prevIframe){
+        prevIframe.setAttribute('src','');
+    }
+
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+} );
+
+</script>
+
+</body>
+</html>

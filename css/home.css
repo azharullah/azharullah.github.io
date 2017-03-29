@@ -1,274 +1,270 @@
-body
-{
-	background-color: #37474f;
-	font-family: 'PT Sans', sans-serif;
+body {
+    background-color: #37474f;
+    font-family: 'PT Sans', sans-serif;
 }
 
-.brand-logo
-{
-	font-family: 'Acme', sans-serif !important;
-	font-weight: bold !important;
-	color: #3f51b5 !important;
-	font-size: 3rem !important;
+.brand-logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold !important;
+    color: #3f51b5 !important;
+    font-size: 3rem !important;
 }
 
-#myimagemain
-{
-	position: absolute;
-	height: 13vw;
-	width: 13vw;
-	border-radius: 50%;
-	top: 45vh;
-	left: 50%;
-	transform: translate(-50%,-50%);
+#myimagemain {
+    position: absolute;
+    height: 13vw;
+    width: 13vw;
+    border-radius: 50%;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.fb_section
-{
-	position: absolute;
-	top: 11vh;
-	right: 2vh;
-	color: white !important;
+.fb_section {
+    position: absolute;
+    top: 11vh;
+    right: 2vh;
+    color: white !important;
 }
 
-.twitter-follow-button
-{
-	position: absolute !important;
-	top: 15vh !important;
-	right: 2vh !important;
-	color: white !important;
+.twitter-follow-button {
+    position: absolute !important;
+    top: 15vh !important;
+    right: 2vh !important;
+    color: white !important;
 }
 
-.resume
-{
-	position: absolute;
-	top: 95vh;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	background-color: #ffffff;
-	font-size: 20px !important;
-	font-weight: bold;
+.resume {
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px !important;
+    font-weight: bold;
+    transition: all 0.1s;
+    font-family: 'Josefin Sans', sans-serif !important;
 }
 
-.resume a
-{
-	color: black !important;
-	font-family: 'Acme', sans-serif !important;
+.resume:hover {
+    color: black;
+    transition: all 0.1s;
 }
 
-.social_icons
-{
-	height: 4.2vw;
-	width: 4.2vw;
-	border-radius: 50%;
-	display: inline;
-	filter: invert(100%);
+.social_icons {
+    height: 4.2vw;
+    width: 4.2vw;
+    border-radius: 50%;
+    display: inline;
+    filter: invert(100%);
 }
 
-nav
-{
-	z-index: 10000 !important;
+nav {
+    z-index: 10000 !important;
 }
 
-#main_contents
-{
-	height: 95vh !important;
+#main_contents {
+    height: 95vh !important;
 }
 
-#main_contents:before
-{
-	height: 95vh !important;
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: -1;
-	background-image: url("../img/back.jpg");
-	background-size: 100vw 95vh;
-	-webkit-filter: blur(5px);
-  	-moz-filter: blur(5px);
-  	-o-filter: blur(5px);
-  	-ms-filter: blur(5px);
-  	filter: blur(5px);
-  	-webkit-filter: grayscale(100%);
-   	filter: grayscale(100%);
+#main_contents:before {
+    height: 95vh !important;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url("../img/back.jpg");
+    background-size: 100vw 95vh;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
-.act_icons
-{
-	position: absolute;
-	top: 76vh;
-	left: 50%;
-	transform: translate(-50%,-50%);
+.act_icons {
+    position: absolute;
+    top: 76vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.act_icons a
-{
-	margin-left: 10px;
-	margin-right: 20px;
+.act_icons a {
+    margin-left: 10px;
+    margin-right: 20px;
 }
 
-.social_icons
-{
-	opacity: 0.6;
-	transition-duration: 1s;
+.social_icons {
+    opacity: 0.6;
+    transition-duration: 1s;
 }
 
-.social_icons:hover
-{
-	opacity: 1;
-	transition-duration: 1s;
+.social_icons:hover {
+    opacity: 1;
+    transition-duration: 1s;
 }
 
-nav ul a
-{
-	font-weight: bold;
-	font-size: 1.3rem !important;
-	margin-left: 3px !important;
-	margin-right: 3px !important;
+nav ul a {
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    font-family: 'Raleway', sans-serif !important;
+    transition: all 0.2s;
 }
 
-.brand-logo img
-{
-	height: 0px;
-	width: 0px;
-	border-radius: 50%;
-	margin-left: 10px;
-	margin-right: 10px;
-	vertical-align: middle;
+nav ul a:hover {
+    font-weight: bolder;
+    color: white;
+    font-size: 1.35rem !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    font-family: 'Raleway', sans-serif !important;
+    transition: all 0.2s;
 }
 
-#aboutme, #career, #code, #contact
-{
-	margin-top: 100px;
-	margin-bottom: 100px;
+.brand-logo img {
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-#aboutme h3, #career h3, #code h3, #contact h3
-{
-	margin-top: 20px;
-	margin-bottom: 60px;
-	color: red;
-	font-family: 'Baloo Bhaina', cursive;
+#aboutme,
+#career,
+#code,
+#contact,
+#presentations {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-#aboutme p
-{
-	font-family: 'Varela Round', sans-serif;
-	color: white;
-	font-weight: bold;
-	font-size: 1.3rem;
+#aboutme h3,
+#career h3,
+#code h3,
+#contact h3,
+#presentations h3 {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: red;
+    font-family: 'Nunito', sans-serif;
 }
 
-.collapsible-header
-{
-	font-size: 1.6rem;
-	color: #ef5350 !important;
-	font-family: 'Righteous', cursive;
+#aboutme p {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
-.career_dates
-{
-	color: #1976d2;
-	font-size: 1.3rem;
+.collapsible-header {
+    font-size: 1.6rem;
+    color: #ef5350 !important;
+    font-family: 'Nunito', sans-serif;
 }
 
-.collapsible-body
-{
-	font-size: 1.2rem;
-	color: #0d47a1;
-	background-color: #90caf9;
-	font-family: 'Varela Round', sans-serif;
+.career_dates {
+    color: #1976d2;
+    font-size: 1.3rem;
 }
 
-.projects_img
-{
-	width: 4rem !important;
-	height: 4rem !important;
-	margin-right: 10px !important;
+.collapsible-body {
+    font-size: 1.2rem;
+    color: #0d47a1;
+    background-color: #90caf9;
+    font-family: 'Raleway', sans-serif;
 }
 
-.avatar .title
-{
-	font-size: 1.5rem !important;
-	color: #e53935;
-	font-weight: bold;
-	font-family: 'Righteous', cursive;
+.projects_img {
+    width: 4rem !important;
+    height: 4rem !important;
+    margin-right: 10px !important;
 }
 
-.avatar p
-{
-	margin-top: 7px !important;
-	font-family: 'Varela Round', sans-serif;
-	font-size: 1.0rem;
+.avatar .title {
+    font-size: 1.5rem !important;
+    color: #e53935;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
 }
 
-.avatar .chip a
-{
-	color: #1976d2 !important;
-	font-size: 1.0rem;
+.avatar .subtitle {
+    font-size: 1.2rem !important;
+    color: blueviolet;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
 }
 
-h4
-{
-	color: white;
-	font-family: 'Baloo Bhaina', cursive;
-	margin-top: -10px;
-	margin-bottom: 20px;
+.avatar p {
+    margin-top: 7px !important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.0rem;
 }
 
-div.chip.last_chips.odd
-{
-	margin-left: 10vw !important;
+.avatar .chip a {
+    color: #1976d2 !important;
+    font-size: 1.0rem;
 }
 
-.last_chips a
-{
-	font-size: 1rem !important;
-	color: red !important;
+h4 {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
-.last_chips
-{
-	margin-top: -20px !important;
+div.chip.last_chips.odd {
+    margin-left: 10vw !important;
 }
 
-footer
-{
-	font-family: 'Varela Round', sans-serif;
+.last_chips a {
+    font-size: 1rem !important;
+    color: red !important;
 }
 
-footer a
-{
-	color: #303f9f;
+.last_chips {
+    margin-top: -20px !important;
 }
+
+footer {
+    font-family: 'Raleway', sans-serif;
+}
+
+footer a {
+    color: yellow;
+}
+
 
 /**********************************************************************/
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
+
 
 /*@font-face {
   font-family: 'Material Icons';
